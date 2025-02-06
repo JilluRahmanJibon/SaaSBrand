@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 const About = () => {
 	return (
-		<section className="about-section py-20 bg-gradient-to-r from-teal-500 to-blue-500 text-white">
+		<section id="about" className="about-section py-20 bg-gradient-to-r from-teal-500 to-blue-500 text-white">
 			<div className="container mx-auto text-center px-6">
 				<motion.h2
 					className="text-4xl font-extrabold mb-6"

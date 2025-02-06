@@ -45,7 +45,8 @@ const FAQSection = () => {
 				<motion.h2
 					className="text-4xl font-extrabold text-white mb-8"
 					initial={{ opacity: 0 }}
-					animate={{ opacity: 1 }}
+					whileInView={{ opacity: 1, y: 0 }}
+					viewport={{ once: false, amount: 0.2 }}
 					transition={{ duration: 1 }}>
 					Frequently Asked Questions
 				</motion.h2>

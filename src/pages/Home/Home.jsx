@@ -10,15 +10,30 @@ import Testimonial from "./Testimonial";
 const Home = () => {
 	return (
 		<div>
-      <Hero />
-      <Features />
-      <Pricing />
-      <Testimonial />
-      <About />
-      <CTASection />
-      <FAQSection />
-      <Contact />
-      
+			<div data-aos="fade-up">
+				<Hero />
+			</div>
+			<div data-aos="fade-right">
+				<Features />
+			</div>
+			<div data-aos="fade-left">
+				<Pricing />
+			</div>
+			<div data-aos="zoom-in">
+				<Testimonial />
+			</div>
+			<div data-aos="fade-up">
+				<About />
+			</div>
+			<div data-aos="flip-up">
+				<CTASection />
+			</div>
+			<div data-aos="fade-up">
+				<FAQSection />
+			</div>
+			<div data-aos="fade-up">
+				<Contact />
+			</div>
 		</div>
 	);
 };

@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-scroll";
+import logo1 from "../assets/logo/logo1.png";
+import logo2 from "../assets/logo/logo2.png";
 
 const Navbar = () => {
 	const [scrolling, setScrolling] = useState(false);
@@ -20,15 +22,21 @@ const Navbar = () => {
 
 	return (
 		<motion.nav
-			className={`w-full fixed top-0 left-0 z-50 transition-all duration-300 ${
+			className={`w-full  items-center fixed top-0 left-0 z-50 transition-all duration-300 ${
 				scrolling ? "bg-white shadow-md text-gray-900" : "text-white"
 			}`}
 			initial={{ opacity: 0, y: -20 }}
 			animate={{ opacity: 1, y: 0 }}
 			transition={{ duration: 0.5 }}>
-			<div className="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
-				<div className="text-2xl font-bold">
-					<a href="/">SaaSBrand</a>
+			<div className="max-w-6xl max-h-[100px]  mx-auto px-6 py-4 flex justify-between items-center">
+				<div className="text-2xl   font-bold">
+					<a href="/">
+						<img
+							className="max-h-[80px]"
+							src={scrolling ? logo2 : logo1}
+							alt=""
+						/>
+					</a>
 				</div>
 
 				{/* Desktop Navigation */}
@@ -78,7 +86,7 @@ const Navbar = () => {
 				<div className="md:hidden flex items-center">
 					<button
 						onClick={handleMenuToggle}
-						className="text-white focus:outline-none">
+						className={`${scrolling ? "text-black" : "text-white"} focus:outline-none`}>
 						{menuOpen ? (
 							<svg
 								xmlns="http://www.w3.org/2000/svg"
